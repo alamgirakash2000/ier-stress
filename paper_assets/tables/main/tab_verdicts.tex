@@ -1,0 +1,18 @@
+\setlength{\tabcolsep}{3pt}%
+\begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}lccccl@{}}
+\toprule
+Question & HalfCheetah & Hopper & walker-walk & finger-turn\_hard & Reading (rule) \\
+\midrule
+Q1 Gain over BASE & $\blacktriangledown$ & $\circ$ & $\blacktriangle$ & $\circ$ & Task-dependent (mixed) \\
+Q1 Schedule & $\blacktriangledown$ & $\circ$ & $\circ$ & $\circ$ & Matters on one task \\
+Q2 Re-execution vs.\ copy & $\circ$ & -- & $\blacktriangle$ & $\circ$ & Better on walker-walk (holds) \\
+Q3 Retention & $\blacktriangledown$ & $\blacktriangledown$ & $\blacktriangledown$ & $\blacktriangledown$ & Far below 1 (mixed$^{\mathrm{a}}$) \\
+Q4 Gain under noise5 & $\blacktriangle$$^{\mathrm{b}}$ & -- & $\circ$$^{\mathrm{c}}$ & $\circ$ & No clear reduction (does not hold) \\
+Q5 Gain for CrossQ & $\circ$ & $\circ$ & $\blacktriangledown$ & $\circ$ & No clear gain (does not hold) \\
+Q6 Fixed $\RN=3$ & $\circ$ & $\circ$ & $\blacktriangle$ & $\circ$ & No clear loss (holds) \\
+Q7 Early retention & \multicolumn{4}{c}{$\circ$ (one cell across tasks)} & No clear link (does not hold) \\
+\bottomrule
+\noalign{\vskip 2pt}
+\multicolumn{6}{@{}p{\linewidth}@{}}{\footnotesize $^{\mathrm{a}}$\,The Q3 rule also needs the within-run correlation of start distance and retention to be clearly positive in no cell, and it is in one, SAC IER3 on walker-walk under noise10, with a value of 0.08.} \\
+\multicolumn{6}{@{}p{\linewidth}@{}}{\footnotesize $^{\mathrm{b}}$\,HalfCheetah: not clear under dyn20 or for CrossQ. $^{\mathrm{c}}$\,walker-walk: clear under dyn20, borderline at sign-flip p = 0.056.} \\
+\end{tabular*}

@@ -1,0 +1,16 @@
+\begin{tabular}{lllllrr}
+\toprule
+Experiment & Learner & Tasks & Arms & Conditions & Steps & Runs \\
+\midrule
+Reproduction & SAC & all four & BASE, IER & default & 1M & 160 \\
+Released-code schedule & SAC & all four & IER-REL & default & 1M & 80 \\
+Fixed repeat count & SAC & all four & IER3 & default & 1M & 80 \\
+Stress & SAC & all but Hopper & BASE, IER3 & default, noise5, dyn20 & 300k & 360 \\
+Heavy noise & SAC & all but Hopper & BASE, IER3 & noise10 & 300k & 120 \\
+Copy control & SAC & all but Hopper & DUP & default, noise5 & 300k & 120 \\
+Stronger learner & CrossQ & all four & BASE, IER & default & 300k & 160 \\
+Stronger learner, stress & CrossQ & all but Hopper & BASE, IER3 & noise5 (both), default (IER3) & 300k & 180 \\
+\midrule
+Total & & & & & & 1260 \\
+\bottomrule
+\end{tabular}

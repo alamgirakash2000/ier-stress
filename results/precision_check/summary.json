@@ -1,0 +1,30 @@
+{
+ "HalfCheetah-v4": {
+  "stored_episodes_tested": 12,
+  "policy_episodes": 12,
+  "median_relative_return_change": 0.6680864463522771,
+  "share_past_one_spread_unit": 1.0,
+  "median_first_step_past_one_spread_unit": 81.5
+ },
+ "Hopper-v4": {
+  "stored_episodes_tested": 12,
+  "policy_episodes": 12,
+  "median_relative_return_change": 3.419425054240716e-08,
+  "share_past_one_spread_unit": 0.0,
+  "median_first_step_past_one_spread_unit": null
+ },
+ "finger-turn_hard": {
+  "stored_episodes_tested": 1,
+  "policy_episodes": 1,
+  "median_relative_return_change": 0.0,
+  "share_past_one_spread_unit": 0.0,
+  "median_first_step_past_one_spread_unit": null
+ },
+ "walker-walk": {
+  "stored_episodes_tested": 12,
+  "policy_episodes": 10,
+  "median_relative_return_change": 0.3335625498685767,
+  "share_past_one_spread_unit": 0.8333333333333334,
+  "median_first_step_past_one_spread_unit": 161.5
+ }
+}

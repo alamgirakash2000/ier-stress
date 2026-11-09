@@ -1,0 +1,16 @@
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{llccccccccc}
+\toprule
+ & & \multicolumn{3}{c}{HalfCheetah} & \multicolumn{3}{c}{walker-walk} & \multicolumn{3}{c}{finger-turn\_hard} \\
+\cmidrule(lr){3-5}\cmidrule(lr){6-8}\cmidrule(lr){9-11}
+Learner & Condition & BASE & IER3 & Gain & BASE & IER3 & Gain & BASE & IER3 & Gain \\
+\midrule
+SAC & default & 0.75 & 0.67 & \textbf{$-$0.079} & 0.69 & 0.73 & 0.045 & 0.65 & 0.60 & $-$0.049 \\
+SAC & noise5 & 0.50 & 0.50 & 0.007 & 0.68 & 0.71 & 0.027 & 0.63 & 0.62 & $-$0.010 \\
+SAC & noise10 & 0.28 & 0.34 & \textbf{0.059} & 0.67 & 0.64 & $-$0.030 & 0.62 & 0.65 & 0.034 \\
+SAC & dyn20 & 0.68 & 0.61 & \textbf{$-$0.077} & 0.62 & 0.73 & \textbf{0.115} & 0.64 & 0.62 & $-$0.022 \\
+\midrule
+CrossQ & default & 0.87 & 0.95 & 0.078 & 1.00 & 0.97 & $-$0.029 & 0.83 & 0.79 & $-$0.033 \\
+CrossQ & noise5 & 0.66 & 0.79 & 0.124 & 1.00 & 0.96 & $-$0.037 & 0.79 & 0.78 & $-$0.008 \\
+\bottomrule
+\end{tabular}
