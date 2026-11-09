@@ -1,0 +1,28 @@
+# Tasks used in the study. RN values come from Table 1 of the IER paper
+# ("Per-task RN agreement based on 95% near-best criterion").
+HalfCheetah-v4:
+  backend: gym
+  task: HalfCheetah-v4
+  rn: 4
+  obs_dim: 17
+  act_dim: 6
+Hopper-v4:
+  backend: gym
+  task: Hopper-v4
+  rn: 2
+  obs_dim: 11
+  act_dim: 3
+walker-walk:
+  backend: dmc
+  domain: walker
+  task: walk
+  rn: 5
+  obs_dim: 24
+  act_dim: 6
+finger-turn_hard:
+  backend: dmc
+  domain: finger
+  task: turn_hard
+  rn: 5
+  obs_dim: 12
+  act_dim: 2

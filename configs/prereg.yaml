@@ -1,0 +1,6 @@
+# Settings of the main experiments, read by scripts/run_main.py and scripts/make_results.py.
+prereg_sha256: c2b9c9eab8c9c8f1071b2acb3921ae398c86b3cc6369278522186f255c40dcf1
+frozen_at: '2026-11-08 00:20:24'
+main_seeds: 20
+crossq_critic_width: 1024
+crossq_budget: 300000

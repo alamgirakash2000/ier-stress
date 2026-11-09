@@ -1,0 +1,58 @@
+[
+ {
+  "task": "HalfCheetah-v4",
+  "budget": 1000000,
+  "value": 9784.566608554605,
+  "runs": 20,
+  "cut_from_longer_runs": false
+ },
+ {
+  "task": "HalfCheetah-v4",
+  "budget": 300000,
+  "value": 6612.001549521659,
+  "runs": 20,
+  "cut_from_longer_runs": false
+ },
+ {
+  "task": "Hopper-v4",
+  "budget": 1000000,
+  "value": 2992.6037119252296,
+  "runs": 20,
+  "cut_from_longer_runs": false
+ },
+ {
+  "task": "Hopper-v4",
+  "budget": 300000,
+  "value": 2685.7551089999256,
+  "runs": 20,
+  "cut_from_longer_runs": true
+ },
+ {
+  "task": "walker-walk",
+  "budget": 1000000,
+  "value": 904.5569194400263,
+  "runs": 20,
+  "cut_from_longer_runs": false
+ },
+ {
+  "task": "walker-walk",
+  "budget": 300000,
+  "value": 820.435515184577,
+  "runs": 20,
+  "cut_from_longer_runs": false
+ },
+ {
+  "task": "finger-turn_hard",
+  "budget": 1000000,
+  "value": 500.3079999999999,
+  "runs": 20,
+  "cut_from_longer_runs": false
+ },
+ {
+  "task": "finger-turn_hard",
+  "budget": 300000,
+  "value": 218.125,
+  "runs": 20,
+  "cut_from_longer_runs": false
+ }
+]

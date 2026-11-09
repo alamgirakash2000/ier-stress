@@ -1,0 +1,4 @@
+total_steps,length,return,stored_return,trigger,replay_steps,stored_length
+5000,1000,0.0,1000.0,0,1000,1000
+6000,1000,0.0,1000.0,0,1000,1000
+7000,1000,1000.0,1000.0,0,1000,1000

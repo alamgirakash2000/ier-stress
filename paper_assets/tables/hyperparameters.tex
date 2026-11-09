@@ -1,0 +1,45 @@
+\begin{table}[t]
+\centering
+\small
+\begin{tabular}{llrr}
+\toprule
+Learner & Setting & Value & Runs \\
+\midrule
+SAC & actor\_lr & 0.0003 & 920 \\
+SAC & critic\_lr & 0.0003 & 920 \\
+SAC & alpha\_lr & 0.0003 & 920 \\
+SAC & gamma & 0.99 & 920 \\
+SAC & tau & 0.005 & 920 \\
+SAC & reward\_scale & 1.0 & 920 \\
+SAC & batch\_size & 256 & 920 \\
+SAC & train: exploration\_steps & 1000 & 920 \\
+SAC & train: eval\_every & 10000 & 920 \\
+SAC & train: eval\_episodes & 10 & 920 \\
+SAC & train: buffer\_capacity & 1000000 & 920 \\
+SAC & train: checkpoint\_every & 50000 & 920 \\
+SAC & train: updates\_per\_step & 1 & 920 \\
+CrossQ & actor\_lr & 0.001 & 340 \\
+CrossQ & critic\_lr & 0.001 & 340 \\
+CrossQ & alpha\_lr & 0.001 & 340 \\
+CrossQ & adam\_beta1 & 0.5 & 340 \\
+CrossQ & gamma & 0.99 & 340 \\
+CrossQ & batch\_size & 256 & 340 \\
+CrossQ & policy\_delay & 3 & 340 \\
+CrossQ & actor\_hidden & 256 & 340 \\
+CrossQ & critic\_hidden & 1024 & 340 \\
+CrossQ & bn\_momentum & 0.01 & 340 \\
+CrossQ & bn\_eps & 0.001 & 340 \\
+CrossQ & renorm\_warmup & 100000 & 340 \\
+CrossQ & r\_max & 3.0 & 340 \\
+CrossQ & d\_max & 5.0 & 340 \\
+CrossQ & train: exploration\_steps & 1000 & 340 \\
+CrossQ & train: eval\_every & 10000 & 340 \\
+CrossQ & train: eval\_episodes & 10 & 340 \\
+CrossQ & train: buffer\_capacity & 1000000 & 340 \\
+CrossQ & train: checkpoint\_every & 50000 & 340 \\
+CrossQ & train: updates\_per\_step & 1 & 340 \\
+\bottomrule
+\end{tabular}
+\caption{Settings of every main run, read from the run records. Evaluation steps do not count toward the budget. Repeated steps do count.}
+\label{tab:hyperparameters}
+\end{table}

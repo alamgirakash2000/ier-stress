@@ -1,0 +1,102 @@
+{
+ "run_id": "HalfCheetah-v4__default__sac__IER_REL__seed12",
+ "status": "finished",
+ "reason": "",
+ "spec": {
+  "experiment": "R1",
+  "task": "HalfCheetah-v4",
+  "condition": "default",
+  "learner": "sac",
+  "arm": "IER_REL",
+  "seed": 12,
+  "budget": 1000000,
+  "rn": 4,
+  "schedule": "released_code"
+ },
+ "train_config": {
+  "exploration_steps": 1000,
+  "eval_every": 10000,
+  "eval_episodes": 10,
+  "buffer_capacity": 1000000,
+  "checkpoint_every": 50000,
+  "updates_per_step": 1
+ },
+ "learner_config": {
+  "actor_lr": 0.0003,
+  "critic_lr": 0.0003,
+  "alpha_lr": 0.0003,
+  "gamma": 0.99,
+  "tau": 0.005,
+  "reward_scale": 1.0,
+  "batch_size": 256
+ },
+ "hardware": {
+  "device": "cuda",
+  "replay_device": "cuda",
+  "float64": false,
+  "label": "cuda, S=20, P=3, replay=cuda"
+ },
+ "device_networks": "cuda",
+ "device_replay": "cuda",
+ "group_id": "cef4170730dd70dc",
+ "group_seeds": [
+  0,
+  1,
+  2,
+  3,
+  4,
+  5,
+  6,
+  7,
+  8,
+  9,
+  10,
+  11,
+  12,
+  13,
+  14,
+  15,
+  16,
+  17,
+  18,
+  19
+ ],
+ "code_hash": "4090b4aa35ade07aa432dccb9ab2c7c2839c596c1a9bbeaeeb842690d6044aaf",
+ "code_hashes_by_session": [
+  "4090b4aa35ade07aa432dccb9ab2c7c2839c596c1a9bbeaeeb842690d6044aaf"
+ ],
+ "code_hash_at_finish": "4090b4aa35ade07aa432dccb9ab2c7c2839c596c1a9bbeaeeb842690d6044aaf",
+ "package_versions": {
+  "python": "3.11.18",
+  "torch": "2.9.1+cu128",
+  "mujoco": "4.0.0",
+  "gymnasium": "1.4.0",
+  "dm_control": "1.0.51",
+  "numpy": "2.4.6",
+  "scipy": "1.17.1",
+  "pandas": "2.3.3",
+  "pydantic": "2.14.3",
+  "opencv-python-headless": "5.0.0.93"
+ },
+ "platform": "Linux-5.15.0-191-generic-x86_64-with-glibc2.35",
+ "machine": {
+  "name": "vast:RTX 3090:59690126",
+  "machine_type": "vast RTX 3090",
+  "cpu": "x86_64",
+  "cpu_count": 32,
+  "processes_per_gpu": 3,
+  "gpu": "NVIDIA GeForce RTX 3090"
+ },
+ "seed": 12,
+ "steps_reached": 1000000,
+ "wall_time_s": 15153.668354034424,
+ "guard_paused_s": 0.0,
+ "resume_count": 0,
+ "train_env_steps_group": 20000000,
+ "eval_env_steps_group": 20000000,
+ "python_argv": [
+  "/workspace/ierstress/scripts/run_group.py",
+  "/workspace/ierstress/results/checkpoints/cloud_sac-halfcheetah/jobs/847942400e61.json"
+ ],
+ "finished_at": "2026-11-08T13:18:08"
+}

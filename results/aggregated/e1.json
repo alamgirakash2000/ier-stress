@@ -1,0 +1,143 @@
+{
+ "task": "walker-walk",
+ "condition": "default",
+ "budget": 300000,
+ "normalizer": 820.435515184577,
+ "runs": {
+  "IER3_RANDOM": 20,
+  "IER3": 20,
+  "BASE": 20,
+  "DUP": 20
+ },
+ "excluded": {
+  "IER3_RANDOM": [],
+  "IER3": [],
+  "BASE": [],
+  "DUP": []
+ },
+ "mean_normalized_auc": {
+  "IER3_RANDOM": 0.6767925605246976,
+  "IER3": 0.7343422048663072,
+  "BASE": 0.6897471222063014,
+  "DUP": 0.6151760089541651
+ },
+ "contrasts": {
+  "IER3_RANDOM minus IER3": {
+   "n": 20,
+   "estimate": -0.057549644341609626,
+   "low": -0.11360782719912689,
+   "high": -0.001836428007441234,
+   "win_rate": 0.3,
+   "clear": true,
+   "missing_seeds": []
+  },
+  "IER3_RANDOM minus BASE": {
+   "n": 20,
+   "estimate": -0.01295456168160368,
+   "low": -0.06424181822697037,
+   "high": 0.0357945795042336,
+   "win_rate": 0.5,
+   "clear": false,
+   "missing_seeds": []
+  },
+  "IER3_RANDOM minus DUP": {
+   "n": 20,
+   "estimate": 0.06161655157053244,
+   "low": 0.006546232177016526,
+   "high": 0.1158537602192849,
+   "win_rate": 0.65,
+   "clear": true,
+   "missing_seeds": []
+  }
+ },
+ "retention": [
+  {
+   "id": "P9",
+   "question": "Q3",
+   "label": "IER3_RANDOM: median retention ratio minus 1",
+   "task": "walker-walk",
+   "learner": "sac",
+   "condition": "default",
+   "budget": 300000,
+   "kind": "paired",
+   "n": 20,
+   "estimate": -0.18286923638703237,
+   "low": -0.23389686455848838,
+   "high": -0.13615907742564362,
+   "win_rate": 0.0,
+   "sd": 0.11521011256613857,
+   "clear": true,
+   "seeds": "0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19",
+   "missing_seeds": "",
+   "excluded_runs": "",
+   "cut_from_longer_runs": false,
+   "note": ""
+  },
+  {
+   "id": "P10",
+   "question": "Q3",
+   "label": "IER3_RANDOM: Spearman of start distance against retention, within runs",
+   "task": "walker-walk",
+   "learner": "sac",
+   "condition": "default",
+   "budget": 300000,
+   "kind": "paired",
+   "n": 20,
+   "estimate": -0.02555669843053484,
+   "low": -0.07457678176739625,
+   "high": 0.023008394836167293,
+   "win_rate": 0.4,
+   "sd": 0.11243825515675565,
+   "clear": false,
+   "seeds": "0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19",
+   "missing_seeds": "",
+   "excluded_runs": "",
+   "cut_from_longer_runs": false,
+   "note": ""
+  },
+  {
+   "id": "P9",
+   "question": "Q3",
+   "label": "IER3: median retention ratio minus 1",
+   "task": "walker-walk",
+   "learner": "sac",
+   "condition": "default",
+   "budget": 300000,
+   "kind": "paired",
+   "n": 20,
+   "estimate": -0.8547497301606084,
+   "low": -0.873022229018191,
+   "high": -0.8361884800164142,
+   "win_rate": 0.0,
+   "sd": 0.04382849112672543,
+   "clear": true,
+   "seeds": "0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19",
+   "missing_seeds": "",
+   "excluded_runs": "",
+   "cut_from_longer_runs": false,
+   "note": ""
+  },
+  {
+   "id": "P10",
+   "question": "Q3",
+   "label": "IER3: Spearman of start distance against retention, within runs",
+   "task": "walker-walk",
+   "learner": "sac",
+   "condition": "default",
+   "budget": 300000,
+   "kind": "paired",
+   "n": 20,
+   "estimate": -0.030152553965327338,
+   "low": -0.06946292681913653,
+   "high": 0.010390314374492136,
+   "win_rate": 0.35,
+   "sd": 0.0934254455115353,
+   "clear": false,
+   "seeds": "0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19",
+   "missing_seeds": "",
+   "excluded_runs": "",
+   "cut_from_longer_runs": false,
+   "note": ""
+  }
+ ]
+}

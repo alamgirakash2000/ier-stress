@@ -1,0 +1,6 @@
+total_steps,new_best,length,kind
+8000,8.0,1000,policy
+13000,34.0,1000,policy
+15000,54.0,1000,replay
+16000,974.0,1000,replay
+26000,1000.0,1000,policy

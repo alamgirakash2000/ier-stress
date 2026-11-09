@@ -1,0 +1,42 @@
+{
+ "task": "HalfCheetah-v4",
+ "seeds": [
+  100,
+  101,
+  102
+ ],
+ "budget": 300000,
+ "rule": "within 20 percent of the reference mean, or reference mean inside the range of our 3 seeds",
+ "pairs": {
+  "crossq": {
+   "ours_per_seed": [
+    9692.58882995269,
+    8705.158946626194,
+    10584.370513122147
+   ],
+   "reference_per_seed": [
+    11298.20082318,
+    11115.90866384,
+    11256.88567352
+   ],
+   "ours_mean": 9660.706096567012,
+   "reference_mean": 11223.665053513332,
+   "relative_difference": 0.13925566644178045,
+   "within_20_percent": true,
+   "reference_mean_inside_our_range": false,
+   "passed": true
+  }
+ },
+ "wall_time_s": {
+  "crossq": {
+   "ours": 11922.13807797432,
+   "reference": [
+    11259.710166692734,
+    11475.69212770462,
+    6488.295135736465
+   ]
+  }
+ },
+ "complete": false,
+ "passed": true
+}

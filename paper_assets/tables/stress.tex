@@ -1,0 +1,30 @@
+\begin{table}[t]
+\centering
+\small
+\begin{tabular}{lllrrrrr}
+\toprule
+Learner & Task & Condition & Start distance & IER3 gain [95\% CI] & Clear & Win rate & Seeds \\
+\midrule
+CrossQ & HalfCheetah & default & 0.21 & 0.078 [-0.093, 0.264] & no & 0.45 & 20 \\
+CrossQ & HalfCheetah & noise5 & 1.06 & 0.124 [-0.000, 0.249] & no & 0.55 & 20 \\
+CrossQ & walker-walk & default & 1.20 & -0.029 [-0.085, 0.028] & no & 0.30 & 20 \\
+CrossQ & walker-walk & noise5 & 1.50 & -0.037 [-0.094, 0.022] & no & 0.35 & 20 \\
+CrossQ & finger-turn\_hard & default & 1.19 & -0.033 [-0.202, 0.127] & no & 0.55 & 20 \\
+CrossQ & finger-turn\_hard & noise5 & 1.24 & -0.008 [-0.192, 0.171] & no & 0.50 & 20 \\
+SAC & HalfCheetah & default & 0.21 & -0.079 [-0.113, -0.045] & yes & 0.10 & 20 \\
+SAC & HalfCheetah & noise5 & 1.06 & 0.007 [-0.027, 0.045] & no & 0.50 & 20 \\
+SAC & HalfCheetah & noise10 & 2.12 & 0.059 [0.016, 0.110] & yes & 0.65 & 20 \\
+SAC & HalfCheetah & dyn20 & 0.21 & -0.077 [-0.118, -0.044] & yes & 0.15 & 20 \\
+SAC & walker-walk & default & 1.19 & 0.045 [-0.012, 0.097] & no & 0.55 & 20 \\
+SAC & walker-walk & noise5 & 1.51 & 0.027 [-0.021, 0.075] & no & 0.55 & 20 \\
+SAC & walker-walk & noise10 & 2.18 & -0.030 [-0.084, 0.027] & no & 0.40 & 20 \\
+SAC & walker-walk & dyn20 & 1.20 & 0.115 [0.056, 0.173] & yes & 0.75 & 20 \\
+SAC & finger-turn\_hard & default & 1.16 & -0.049 [-0.119, 0.020] & no & 0.35 & 20 \\
+SAC & finger-turn\_hard & noise5 & 1.28 & -0.010 [-0.080, 0.064] & no & 0.55 & 20 \\
+SAC & finger-turn\_hard & noise10 & 1.38 & 0.034 [-0.044, 0.120] & no & 0.45 & 20 \\
+SAC & finger-turn\_hard & dyn20 & 1.15 & -0.022 [-0.125, 0.072] & no & 0.55 & 20 \\
+\bottomrule
+\end{tabular}
+\caption{Gain of IER with RN = 3 over the same learner without it, in normalized AUC over 300k environment steps. Start distance is the mean distance between a repeat's start state and the stored episode's start state.}
+\label{tab:stress}
+\end{table}

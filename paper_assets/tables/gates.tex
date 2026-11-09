@@ -1,0 +1,26 @@
+\begin{table}[t]
+\centering
+\small
+\begin{tabular}{llp{7cm}l}
+\toprule
+Gate & Check & Value & Result \\
+\midrule
+G1 & CrossQ against the reference & 9661 against 11224, difference 13.9 percent & pass \\
+G1 & SAC against the reference & 7614 against 5818, difference 30.9 percent & fail \\
+G1 & SAC against SB3 SAC with the upstream log std (debug) & 7614 against 6815, difference 11.7 percent & pass \\
+G2 & C1, HalfCheetah & -0.138 [-0.258, -0.035] & clear \\
+G2 & C2, HalfCheetah & 0.179 [0.048, 0.310] & clear \\
+G2 & C3, HalfCheetah & -0.171 [-0.343, -0.033] & clear \\
+G2 & C4, HalfCheetah & -0.086 [-0.328, 0.229] & not clear \\
+G2 & C5, HalfCheetah & 0.012 [-0.021, 0.048] & not clear \\
+G2 & C1, walker-walk & 0.073 [-0.060, 0.204] & not clear \\
+G2 & C2, walker-walk & -0.080 [-0.358, 0.127] & not clear \\
+G2 & C3, walker-walk & 0.032 [-0.108, 0.137] & not clear \\
+G2 & C4, walker-walk & -0.120 [-0.261, 0.035] & not clear \\
+G2 & C5, walker-walk & -0.022 [-0.132, 0.089] & not clear \\
+G2 & decision & At least one of C1 to C5 is clear on at least one task. & GO \\
+\bottomrule
+\end{tabular}
+\caption{Implementation checks on pilot seeds, which do not enter any other result. G1 compares mean final return over 3 seeds at 300k steps on HalfCheetah. G2 gives paired contrasts in normalized AUC over 5 seeds at 300k steps.}
+\label{tab:gates}
+\end{table}

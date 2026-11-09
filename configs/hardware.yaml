@@ -1,0 +1,17 @@
+device: cuda
+replay_device: cuda
+group_size: 20
+processes: 1
+label: c_batched_S20_P1
+measured_total_env_steps_per_s: 1753.0
+batching_gain_over_best_measured_without: 4.55
+configurations_not_measured:
+- a_cpu_k12
+- a_cpu_k15
+- b_gpu_k12
+- b_gpu_k15
+- b_gpu_k4
+- b_gpu_k8
+t10_passed: true
+benchmark_task: HalfCheetah-v4
+benchmark_results: logs/benchmark_results.json

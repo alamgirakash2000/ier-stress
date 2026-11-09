@@ -1,0 +1,4 @@
+total_steps,new_best,length,kind
+26000,416.0,1000,policy
+30000,897.0,1000,policy
+42000,1000.0,1000,policy

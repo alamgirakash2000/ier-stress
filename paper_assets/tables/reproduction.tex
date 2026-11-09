@@ -1,0 +1,16 @@
+\begin{table}[t]
+\centering
+\small
+\begin{tabular}{lrrrrrrr}
+\toprule
+Task & BASE final & IER final & IER gain, AUC [95\% CI] & Clear & Win rate & Seeds & Repetition share \\
+\midrule
+HalfCheetah & 9785 & 8620 & -0.090 [-0.134, -0.050] & yes & 0.20 & 20 & 0.371 \\
+Hopper & 2993 & 2779 & -0.054 [-0.130, 0.023] & no & 0.25 & 20 & 0.012 \\
+walker-walk & 905 & 958 & 0.050 [0.007, 0.096] & yes & 0.55 & 20 & 0.198 \\
+finger-turn\_hard & 500 & 510 & -0.010 [-0.076, 0.055] & no & 0.50 & 20 & 0.013 \\
+\bottomrule
+\end{tabular}
+\caption{Reproduction with SAC under the default condition over 1M environment steps. Final return is the mean of the last 5 evaluations. The gain is the mean per-seed difference in normalized AUC with a percentile bootstrap interval. An effect is clear when its interval excludes zero.}
+\label{tab:reproduction}
+\end{table}

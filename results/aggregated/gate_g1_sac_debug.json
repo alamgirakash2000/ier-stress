@@ -1,0 +1,29 @@
+{
+ "task": "HalfCheetah-v4",
+ "seeds": [
+  100,
+  101,
+  102
+ ],
+ "budget": 300000,
+ "question": "Does SB3 SAC with the upstream log std of the IER actor match our SAC?",
+ "rule": "the Gate G1 rule, fixed before this run: within 20 percent, or reference mean inside our range",
+ "pair": {
+  "ours_per_seed": [
+   7862.747910052776,
+   7880.941099986507,
+   7099.655704453182
+  ],
+  "reference_per_seed": [
+   6780.934950559999,
+   6320.595763199999,
+   7342.99917978
+  ],
+  "ours_mean": 7614.448238164155,
+  "reference_mean": 6814.843297846666,
+  "relative_difference": 0.117332843232088,
+  "within_20_percent": true,
+  "reference_mean_inside_our_range": false,
+  "passed": true
+ }
+}

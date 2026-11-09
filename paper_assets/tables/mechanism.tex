@@ -1,0 +1,18 @@
+\begin{table}[t]
+\centering
+\small
+\begin{tabular}{llrrrrr}
+\toprule
+Task & Condition & IER3 gain & DUP gain & IER3 minus DUP & Clear & Seeds \\
+\midrule
+HalfCheetah & default & -0.079 [-0.113, -0.045] & -0.061 [-0.153, 0.007] & -0.018 [-0.086, 0.068] & no & 20 \\
+HalfCheetah & noise5 & 0.007 [-0.027, 0.045] & -0.017 [-0.064, 0.029] & 0.024 [-0.035, 0.088] & no & 20 \\
+walker-walk & default & 0.045 [-0.012, 0.097] & -0.075 [-0.140, -0.006] & 0.119 [0.060, 0.184] & yes & 20 \\
+walker-walk & noise5 & 0.027 [-0.021, 0.075] & -0.023 [-0.097, 0.043] & 0.049 [0.003, 0.100] & yes & 20 \\
+finger-turn\_hard & default & -0.049 [-0.119, 0.020] & -0.109 [-0.185, -0.031] & 0.061 [-0.025, 0.148] & no & 20 \\
+finger-turn\_hard & noise5 & -0.010 [-0.080, 0.064] & -0.042 [-0.105, 0.019] & 0.032 [-0.040, 0.105] & no & 20 \\
+\bottomrule
+\end{tabular}
+\caption{Mechanism with SAC over 300k environment steps. DUP adds RN copies of the stored episode to the replay buffer with no extra environment steps. All values are normalized AUC with 95 percent percentile bootstrap intervals over seeds.}
+\label{tab:mechanism}
+\end{table}

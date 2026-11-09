@@ -1,0 +1,102 @@
+{
+ "sac_1000k": {
+  "learner": "sac",
+  "budget": 1000000,
+  "tasks": [
+   "HalfCheetah-v4",
+   "Hopper-v4",
+   "walker-walk",
+   "finger-turn_hard"
+  ],
+  "seeds": [
+   0,
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8,
+   9,
+   10,
+   11,
+   12,
+   13,
+   14,
+   15,
+   16,
+   17,
+   18,
+   19
+  ],
+  "left_out": [],
+  "iqm": {
+   "BASE": {
+    "estimate": 0.810038623024823,
+    "low": 0.7728124721769409,
+    "high": 0.8425655979406624
+   },
+   "IER": {
+    "estimate": 0.773048067413118,
+    "low": 0.7440236007142345,
+    "high": 0.7998085900067806
+   }
+  },
+  "probability_of_improvement": {
+   "estimate": 0.4275,
+   "low": 0.340625,
+   "high": 0.5137499999999999
+  }
+ },
+ "crossq_300k": {
+  "learner": "crossq",
+  "budget": 300000,
+  "tasks": [
+   "HalfCheetah-v4",
+   "Hopper-v4",
+   "walker-walk",
+   "finger-turn_hard"
+  ],
+  "seeds": [
+   0,
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8,
+   9,
+   10,
+   11,
+   12,
+   13,
+   14,
+   15,
+   16,
+   17,
+   18,
+   19
+  ],
+  "left_out": [],
+  "iqm": {
+   "BASE": {
+    "estimate": 0.9476912455988498,
+    "low": 0.8786040434953556,
+    "high": 0.9989992771590007
+   },
+   "IER": {
+    "estimate": 0.8939513552549929,
+    "low": 0.8568921302993289,
+    "high": 0.9266570157827851
+   }
+  },
+  "probability_of_improvement": {
+   "estimate": 0.4075,
+   "low": 0.3193593750000001,
+   "high": 0.49562500000000004
+  }
+ }
+}

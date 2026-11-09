@@ -1,0 +1,6 @@
+[project]
+name = "ierstress"
+version = "0.1.0"
+description = "A stress test of Instant Episode Repetition"
+requires-python = ">=3.11"
+
