@@ -1,6 +1,6 @@
 # Does Repetition Really Reinforce? A Stress Test of Instant Episode Repetition
 
-Code, raw results and analysis for an anonymous submission.
+Code and reproduction instructions for an anonymous submission.
 
 ## Abstract
 
@@ -39,12 +39,12 @@ All figures (PDF and PNG) are in [`paper_assets/figures/`](paper_assets/figures)
 
 ## Reproducing
 
-See **[reproduce/README.md](reproduce/README.md)** for setup, rerunning each experiment on your own GPU, and rebuilding every number, figure and table from the saved runs. In short:
+See **[reproduce/README.md](reproduce/README.md)** for setup, the GPU hours behind each result, and how to retrain and check any of them on your own GPU. In short:
 
 ```bash
 conda env create -f environment.yml && conda activate ierstress
-python scripts/rebuild.py                 # every result, figure and table from results/raw, no GPU
-python scripts/run_main.py --item A1      # retrain one experiment
+python scripts/run_main.py --item A1 --tasks walker-walk    # train the runs behind one result
+python scripts/aggregate.py                                 # contrasts and intervals in results/aggregated/
 ```
 
 ## Repository
@@ -54,9 +54,7 @@ python scripts/run_main.py --item A1      # retrain one experiment
 | [`iers/`](iers) | Training code: SAC and CrossQ trained as stacked groups of seeds, the IER, released-schedule and copy arms, test conditions, analysis and plots |
 | [`scripts/`](scripts) | Entry points for training, aggregation, figures, tables and the replay check |
 | [`configs/`](configs) | Task settings, reset spreads and the frozen analysis configuration |
-| [`results/raw/`](results/raw) | One folder per run, 1,280 runs |
-| [`results/aggregated/`](results/aggregated) | Contrasts, gains, curves, aggregates, replay check, random-replay control |
-| [`paper_assets/`](paper_assets) | Figures and tables |
+| [`paper_assets/`](paper_assets) | Figures and tables of the paper |
 | [`reproduce/`](reproduce) | Reproduction guide |
 | [`third_party/ier/`](third_party/ier) | The original IER code (MIT), unmodified |
 

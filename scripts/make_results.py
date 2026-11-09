@@ -107,7 +107,7 @@ def compute_lines(summary: dict) -> list[str]:
              f"- Wall time of all groups: {num(compute.get('group_wall_hours'), 1)} hours, of which the resource guard "
              f"held training back for {num(compute.get('guard_pause_hours'), 1)} hours.",
              f"- Code hashes: {', '.join('`' + h[:12] + '`' for h in compute.get('code_hashes', [])) or 'none'}, "
-             "each with a per-file manifest in `results/code_manifests/`."]
+             "each with a per-file manifest in `logs/code_manifests/`."]
     for grid, r in sorted(resources.items()):
         lines.append(f"- {grid}: GPU {num(r['gpu_util_mean_pct'], 1)} percent and CPU {num(r['cpu_util_mean_pct'], 1)} "
                      f"percent on average over {r['samples']} samples, peak GPU memory {num(r['gpu_mem_peak_mb'], 0)} MB.")

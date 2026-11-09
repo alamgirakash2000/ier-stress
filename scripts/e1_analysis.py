@@ -1,8 +1,7 @@
 """E1, IER3_RANDOM, an exploratory control. Written before any E1 run existed.
 
     python scripts/e1_analysis.py
-    python scripts/e1_analysis.py --raw check/raw --out check/aggregated/e1.json   E1 retrained into check/raw,
-                                                                      compared with the saved B1 and C1 runs
+    python scripts/e1_analysis.py --raw check/raw --out check/e1.json     runs trained into another folder
 
 Compares E1 (IER3_RANDOM, walker-walk, default, 300k, seeds 0 to 19) with B1's IER3 and BASE and C1's DUP (RN = 3)
 on the same task, condition, budget and seeds, paired by seed. The metric and statistics are those of the main
@@ -41,7 +40,7 @@ OUT = ROOT / "results" / "aggregated" / "e1.json"
 
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    parser.add_argument("--raw", type=Path, default=RESULTS_RAW, help="folder holding the E1 runs")
+    parser.add_argument("--raw", type=Path, default=RESULTS_RAW, help="folder holding the B1, C1 and E1 runs")
     parser.add_argument("--out", type=Path, default=OUT)
     args = parser.parse_args()
     unblind = ROOT / "logs" / "UNBLIND_OK.md"
@@ -49,12 +48,7 @@ def main() -> int:
         print("logs/UNBLIND_OK.md does not name E1. E1 stays blind.")
         return 2
     spreads = load_spreads()
-    # B1 and C1 always come from the saved results. E1 comes from --raw, so a retrained E1 can be checked alone.
-    runs, curves, repeats = load_runs(RESULTS_RAW, spreads, experiments=["B1", "C1"])
-    e1_runs, e1_curves, e1_repeats = load_runs(args.raw, spreads, experiments=["E1"])
-    runs = pd.concat([runs, e1_runs], ignore_index=True)
-    curves.update(e1_curves)
-    repeats = pd.concat([f for f in (repeats, e1_repeats) if len(f)], ignore_index=True) if len(e1_repeats) else repeats
+    runs, curves, repeats = load_runs(args.raw, spreads, experiments=["B1", "C1", "E1"])
     runs = runs[(runs.task == TASK) & (runs.condition == CONDITION) & (runs.budget == BUDGET)]
     # The main analysis reads repeats only for its own arms, so E1's are read here with the same helper.
     extra = [read_repeats(args.raw / row["run_id"], row, spreads)
@@ -62,6 +56,11 @@ def main() -> int:
     repeats = pd.concat([repeats, *extra], ignore_index=True) if extra else repeats
     store = Store(runs, curves, repeats)
     cells = {arm: Cell(TASK, CONDITION, "sac", arm, BUDGET) for arm in ("IER3_RANDOM", "IER3", "BASE", "DUP")}
+    empty = [arm for arm, cell in cells.items() if len(store.finished(cell)) == 0]
+    if empty:
+        print(f"No finished {', '.join(empty)} runs on {TASK} in {args.raw}. Train them first with\n"
+              f"    python scripts/run_main.py --items B1 C1 E1 --tasks {TASK}")
+        return 2
     scores = {arm: store.scores(cell) for arm, cell in cells.items()}
     result = {"task": TASK, "condition": CONDITION, "budget": BUDGET, "normalizer": store.normalizer(TASK, BUDGET),
               "runs": {arm: int(len(store.finished(cell))) for arm, cell in cells.items()},
