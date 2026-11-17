@@ -1,6 +1,8 @@
 # When Does Instant Episode Repetition Help? A Reproducibility Study with Replay Diagnostics
 
-Code and reproduction instructions for an anonymous submission.
+Paper: [When Does Instant Episode Repetition Help in Reinforcement Learning? A Reproduction and Analysis of Replay Fidelity](https://www.preprints.org/manuscript/202611.1738)
+
+Code and reproduction instructions for the paper.
 
 ## Abstract
 
@@ -63,3 +65,20 @@ python scripts/make_paper_assets.py                         # figures and tables
 ## Reference
 
 IER: Yamani et al., *Instant Episode Repetition*, Reinforcement Learning Journal, 2026 (arXiv 2608.17347). Code: https://github.com/UoA-CARES/instant-episode-repetition.
+
+## Citation
+
+If you use this code or these results, please cite:
+
+```bibtex
+@article{202611.1738,
+	doi = {10.20944/preprints202611.1738.v1},
+	url = {https://doi.org/10.20944/preprints202611.1738.v1},
+	year = 2026,
+	month = {November},
+	publisher = {Preprints},
+	author = {Alamgir Hossain},
+	title = {When Does Instant Episode Repetition Help in Reinforcement Learning? A Reproduction and Analysis of Replay Fidelity},
+	journal = {Preprints}
+}
+```
